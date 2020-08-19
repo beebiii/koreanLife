@@ -10,7 +10,7 @@ html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,menu,nav,
 dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {margin:0;padding:0; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
 body, input, select, textarea, button {font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.5px; border: none; color: #000;}
 ul,ol,li {list-style:none;}
-a {text-decoration: none; color: #333;}
+a {text-decoration: none; color: #000;}
 em, address {font-style: normal;}
 table{width:100%;border-spacing:0;border-collapse:collapse;}
 
