@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsible.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
   <a href="#content" class="skip">본문바로가기</a>
@@ -216,18 +218,20 @@
             </a>
           </li>
           <li class="other">
-            <h3>자주찾는 메뉴</h3>
-            <ul class="clear">
-              <li>
-                <a href="#a">소비자<br>포털</a>
-              </li>
-              <li>
-                <a href="#a">내보험찾아줌<br>(내보험가입조회)</a>
-              </li>
-              <li>
-                <a href="#a">설계사<br>등록/말소</a>
-              </li>
-            </ul>
+            <div>
+              <h3>자주찾는 메뉴</h3>
+              <ul class="clear">
+                <li>
+                  <a href="#a">소비자<br>포털</a>
+                </li>
+                <li>
+                  <a href="#a">내보험찾아줌<br>(내보험가입조회)</a>
+                </li>
+                <li>
+                  <a href="#a">설계사<br>등록/말소</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -247,13 +251,113 @@
       </div>
     </section>
     <!-- //section home -->
-    <section class="notice"></section>
+    <!-- section community -->
+    <section class="community">
+      <div class="title bar">
+        <h2>생명보험협회</h2>
+      </div>
+      <div class="container">
+        <div class="row row1 clear">
+          <article class="community-news">
+            <div>
+              <!-- 공지사항 -->
+              <h3 class="news-category on"><a href="#a">공지사항</a></h3>
+              <ul class="news-contents">
+                <li><a href="#a">[보도자료] 불확실한 시대의 확실한 대안 변액보험<span>2020-07-29</span></a></li>
+                <li><a href="#a">[보도자료]보험민원 제기를 권유하며 수수료를 요구하는 민원대행업체를 유의하세요</a><span>2020-07-23</span></li>
+                <li><a href="#a">[보도자료] 한국인 주요 사망원인 1위 중대질병 진료비 증가, CI GI 보험으로 치료비 생활비 걱정은 감소</a><span>2020-07-22</span></li>
+                <li><a href="#a">생,손보협회, 2020년도 우수인증설계사 31,919명 선정</a><span>2020-05-29</span></li>
+                <li><a href="#a">[보도해명자료] 금융소비자연맹, '연금저축 수익률, 수수료 빼면 마이너스' 보도자료 관련</a><span>2020-05-13</span></li>
+                <li><a href="#a">[보도자료] 포스트 코로나, 생보사 언택트 건강관리 서비스 주목</a><span>2020-05-06</span></li>
+              </ul>
+              <a href="#a" class="news-more">MORE</a>
+              <!-- //공지사항 -->
+              <!-- 보도자료 -->
+              <h3 class="news-category"><a href="#a">보도자료</a></h3>
+              <ul class="news-contents">
+                <li><a href="#a">[보도자료] 불확실한 시대의 확실한 대안 변액보험<span>2020-07-29</span></a></li>
+                <li><a href="#a">[보도자료]보험민원 제기를 권유하며 수수료를 요구하는 민원대행업체를 유의하세요</a><span>2020-07-23</span></li>
+                <li><a href="#a">[보도자료] 한국인 주요 사망원인 1위 중대질병 진료비 증가, CI GI 보험으로 치료비 생활비 걱정은 감소</a><span>2020-07-22</span></li>
+                <li><a href="#a">생,손보협회, 2020년도 우수인증설계사 31,919명 선정</a><span>2020-05-29</span></li>
+                <li><a href="#a">[보도해명자료] 금융소비자연맹, '연금저축 수익률, 수수료 빼면 마이너스' 보도자료 관련</a><span>2020-05-13</span></li>
+                <li><a href="#a">[보도자료] 포스트 코로나, 생보사 언택트 건강관리 서비스 주목</a><span>2020-05-06</span></li>
+              </ul>
+              <a href="#a" class="news-more">MORE</a>
+              <!-- //보도자료 -->
+              <!-- 회원사소식 -->
+              <h3 class="news-category"><a href="#a">회원사소식</a></h3>
+              <ul class="news-contents">
+                <li><a href="#a">[보도자료] 불확실한 시대의 확실한 대안 변액보험<span>2020-07-29</span></a></li>
+                <li><a href="#a">[보도자료]보험민원 제기를 권유하며 수수료를 요구하는 민원대행업체를 유의하세요</a><span>2020-07-23</span></li>
+                <li><a href="#a">[보도자료] 한국인 주요 사망원인 1위 중대질병 진료비 증가, CI GI 보험으로 치료비 생활비 걱정은 감소</a><span>2020-07-22</span></li>
+                <li><a href="#a">생,손보협회, 2020년도 우수인증설계사 31,919명 선정</a><span>2020-05-29</span></li>
+                <li><a href="#a">[보도해명자료] 금융소비자연맹, '연금저축 수익률, 수수료 빼면 마이너스' 보도자료 관련</a><span>2020-05-13</span></li>
+                <li><a href="#a">[보도자료] 포스트 코로나, 생보사 언택트 건강관리 서비스 주목</a><span>2020-05-06</span></li>
+              </ul>
+              <a href="#a" class="news-more">MORE</a>
+              <!-- //회원사소식 -->
+            </div>
+          </article>
+          <article class="community-quick">
+            <div>
+              <h3><span class="hide">협회소개</span></h3>
+              <ul>
+                <li><a href="#a">협회장인사말</a></li>
+                <li><a href="#a">오시는길</a></li>
+                <li><a href="#a">조직 및 연락처</a></li>
+                <li><a href="#a">월간생명보험</a></li>
+              </ul>
+            </div>
+          </article>
+          <article class="community-banner">
+            <div class="swiper-container">
+              <h3><span class="hide">광고영역</span></h3>
+              <ul class="clear swiper-wrapper">
+                <li class="swiper-slide"><a href="#a"><img src="images/bannerImage.jpg" alt="고용노동부 퇴직연금 홈페이지 바로가기"></a></li>
+                <li class="swiper-slide"><a href="#a"><img src="images/bannerImage.png" alt="코로나19극복! 생명보험협회가 함께합니다 팝업광고"></a></li>
+                <li class="swiper-slide"><a href="#a"><img src="images/bannerImage2.jpg" alt="생명보험에 관한 모든 것 '월간생명보헙'으로 받아보세요!"></a></li>
+              </ul>
+              <div class="swiper-pagination"></div>
+            </div>
+          </article>
+        </div>
+        <div class="row row2 clear">
+          <article class="community-notice">
+            <div>
+              <!-- 공지사항 -->
+              <h3 class="news-category"><a href="#a">공지사항</a></h3>
+              <ul class="news-contents">
+                <li><a href="#a"><입찰공고> 골든펠로우 인증패, ID카드, 뱃지, 트로피, 기념서신 제작 및 발송<span>2020-08-11</span></a></li>
+                <li><a href="#a"><입찰공고> 금융보험 학교 방문교육 및 체험·진로학습 기념품 제작(카드형 USB)<span>2020-08-11</span></a></li>
+                <li><a href="#a">보험업법 위반자 처분내용 공고<span>2020-07-27</span></a></li>
+                <li><a href="#a"><입찰공고> 비시장성지분증권의 공정가치 평가기관 선정<span>2020-07-13</span></a></li>
+              </ul>
+              <a href="#a" class="news-more">MORE</a>
+              <!-- //공지사항 -->
+            </div>
+          </article>
+          <article class="community-quick2">
+            <div>
+              <h3><span class="hide">협회소개2</span></h3>
+              <ul class="clear">
+                <li><a href="#a">협회소개<span>바로가기</span></a></li>
+                <li><a href="#a">간행물<span>바로가기</span></a></li>
+                <li><a href="#a" class="small">회원사 및<br> 유관기관 안내<span>바로가기</span></a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- //section community -->
     <section class="consumer"></section>
     <section class="admin"></section>
     <section class="member"></section>
+    <section class="partner"></section>
     <footer></footer>
   </div>
 
   <script src="js/script.js"></script>
+  <script src="js/swiper.min.js"></script>
 </body>
 </html>
