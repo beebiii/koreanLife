@@ -25,3 +25,17 @@ $('nav > ul > li').mouseleave(function(){
 $('.lang').click(function(){
   $(this).toggleClass('on');
 });
+
+
+//swiper 슬라이드
+var swiper = new Swiper('.swiper-container', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  loop:true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});
