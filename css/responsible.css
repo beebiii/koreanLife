@@ -14,17 +14,34 @@
 
   /* 유틸리티 */
   header .spot {display: none;}
+
+  /* section1 home */
+  .home .bottom-bar {display: none;}
 }
 
 @media screen and (max-width: 1200px) {
-  html {font-size: 20px;}
-  body {font-size: 1rem; }
-
+  /* section1 home */
+  .home {padding-bottom: 4rem; height: auto;}
+  .home .list > li > a {border-radius: .5rem;}
+  .home .list1 {position: initial; width: 100%;}
+  .home .list2 {position: initial; width: 100%; overflow: hidden;}
+  .home .list2 > li {float: left; width: 33.3333%;}
+  .home .list2 li.other {width: 66.6666%; }
+  .home .list2 li.other div {border-radius: .5rem;}
 }
 
+@media screen and (max-width: 990px) {
+  .home .list2 > li > a { background-image:none;}
+}
+
+@media screen and (max-width: 768px) {
+
+  /* section content small */
+  
+}
+
+
 @media screen and (max-width: 600px) {
-  html {font-size: 20px;}
-  body {font-size: 1rem; }
 
   /* 헤더 */
   header nav {display: none;}
