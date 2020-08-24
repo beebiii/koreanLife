@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 1580px) {
 
-  /* 금융공시 바로가기 */
+  /* 금융상품 비교공시 바로가기 */
   .compare {top: 5rem;}
 
 }
@@ -11,17 +11,24 @@
   header nav {width: calc(100% - 195px);}
   header nav > ul > li {width: 25%;}
   header nav > ul > li > a {padding: 0;}
-
-  /* 유틸리티 */
+  /* 헤더 유틸리티 */
   header .spot {display: none;}
 
-  /* section1 home */
+  /* 홈 섹션 */
   .home .bottom-bar {display: none;}
+
+  /* 푸터 */
+  footer .foot_logo {float: none;}
+  footer .foot_content {float: none; padding: 8px 0 0;}
 }
 
 @media screen and (max-width: 1200px) {
-  /* section1 home */
-  .home {padding-bottom: 4rem; height: auto;}
+  /* 공통 */
+  .mo {display: block;}
+
+  /* 홈섹션 */
+  .home {padding: 0 0 4rem; height: auto;}
+  .home .title {padding-top: 206px;}
   .home .list > li > a {border-radius: .5rem;}
   .home .list1 {position: initial; width: 100%;}
   .home .list2 {position: initial; width: 100%; overflow: hidden;}
@@ -29,8 +36,9 @@
   .home .list2 li.other {width: 66.6666%; }
   .home .list2 li.other div {border-radius: .5rem;}
 
-  /* section community */
+  /* 생명보험협회 섹션 */
   .community {padding: 0 0 4rem 0; height: auto;}
+  .community .title {padding-top: 108px;}
   .community .row > article > div {border-radius: 10px;}
   .community .row2 { display: none;}
   .community .community-news {width: 100%;}
@@ -41,6 +49,13 @@
   .community .community-quick ul,
   .community .community-banner ul {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
   .community .community-quick ul {padding: 20% 6%;}
+  .community .community-banner ul li {width: 100%; height: 100%;}
+  .community .community-banner ul li a img {height: 100%;}
+
+  /* 회원사 섹션 */
+  .member {height: auto;}
+  .member .title {padding: 108px 0 110px;}
+  .member .member-content li {padding: 0 0 176px; width: 33.3333%;}
 }
 
 @media screen and (max-width: 990px) {
@@ -49,7 +64,6 @@
 
 @media screen and (max-width: 768px) {
 
-  /* section content small */
   
 }
 
