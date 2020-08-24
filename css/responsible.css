@@ -28,6 +28,19 @@
   .home .list2 > li {float: left; width: 33.3333%;}
   .home .list2 li.other {width: 66.6666%; }
   .home .list2 li.other div {border-radius: .5rem;}
+
+  /* section community */
+  .community {padding: 0 0 4rem 0; height: auto;}
+  .community .row > article > div {border-radius: 10px;}
+  .community .row2 { display: none;}
+  .community .community-news {width: 100%;}
+  .community .community-quick,
+  .community .community-banner {position: relative; width: 50%; height: auto; overflow: none;}
+  .community .community-quick > div,
+  .community .community-banner > div {padding-bottom: 100%;}
+  .community .community-quick ul,
+  .community .community-banner ul {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+  .community .community-quick ul {padding: 20% 6%;}
 }
 
 @media screen and (max-width: 990px) {
