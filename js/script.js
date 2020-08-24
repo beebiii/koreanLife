@@ -1,5 +1,7 @@
 // 하위메뉴
-$('nav > ul > li').mouseenter(function(){
+var menu = $('nav > ul > li');
+
+menu.mouseenter(function(){
   var subMenu = $(this).find('.sub-menu');
   var subMenuHeight = subMenu.innerHeight();
   var htmlFont = $('html').css('fontSize').replace('px', '');
@@ -13,7 +15,7 @@ $('nav > ul > li').mouseenter(function(){
     borderBottomWidth : '2px'
   }, 400);
 });
-$('nav > ul > li').mouseleave(function(){
+menu.mouseleave(function(){
   $('.sub-menu').hide();
   $('header').stop().animate({
     height: 4+'rem',
@@ -25,7 +27,6 @@ $('nav > ul > li').mouseleave(function(){
 $('.lang').click(function(){
   $(this).toggleClass('on');
 });
-
 
 //swiper 슬라이드
 var swiper = new Swiper('.swiper-container', {
