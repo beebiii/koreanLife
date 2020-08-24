@@ -30,7 +30,7 @@ header .container {position: relative;}
 .sub-menu2 > li > a {display: block; padding: 0.4rem 0; font-size: .8rem; color: #797979; font-weight: 500; line-height: 1.3em; transition: all .4s;}
 .sub-menu2 > li > a:hover {color:#555;}
 .sub-menu2 > li > a:before {content: '-'; display: inline-block; margin-right: 3px;}
-/* 유틸리티 */
+/* 헤더 유틸리티 */
 header .spot > div,
 header .spot > button {float: left;}
 header .spot > button {margin-left: .25rem;}
@@ -49,11 +49,11 @@ header .spot .lang.on:before {content: 'KR'}
 .search button:before {content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: .8rem; height: .8rem; background: url(../images/icon_g.png) left -32px top 0;}
 /* 모바일 메뉴 버튼 */
 .mobie-menu-btn {display: none; position: absolute; top: .8rem; right: 1.5rem; width: 2.5rem; height: 2.5rem; background-color: #ddd; border-radius: 5px;}
-/* 금융공시 바로가기 */
+/* 금융상품 비교공시 바로가기 */
 .compare {position: fixed; right: 1.5rem; top: 1.15rem; z-index: 1;}
 .compare img {vertical-align: top;}
 
-/* section home */
+/* 홈 섹션 */
 .home {position: relative; padding: 23.5vh 0 0; background: url(../images/main_visual01.jpg) no-repeat center /cover;} 
 .home .title {margin-bottom: 3.5rem;}
 .home .container {position: relative;}
@@ -88,7 +88,7 @@ header .spot .lang.on:before {content: 'KR'}
 .home .list > li > a:hover p {color: #fff;}
 .home .list > li > a:hover span {background: #fff; color: #000;}
 .home .list2 li.other a:hover:before {transform: scale(1.1); box-shadow: 0 0 .4rem .15rem rgba(0, 0, 0, 0.3);}
-/* 하단공지바 */
+/* 홈섹션 하단공지바 */
 .home .bottom-bar {position: absolute; bottom: 0; left: 0; width: 100%; height: 3rem; line-height: 3rem; background: rgba(9, 37, 68, 0.7);}
 .home .bottom-bar ul {max-width: 1280px; margin: 0 auto; border-left: 1px solid rgba(255, 255, 255, 0.1); border-right: 1px solid rgba(255, 255, 255, 0.1); overflow: hidden;}
 .home .bottom-bar ul li {position: relative; float: left; width: 50%; }
@@ -102,9 +102,9 @@ header .spot .lang.on:before {content: 'KR'}
 .home .bottom-bar ul li a.bar-title {overflow: hidden; display: inline-block; width: 20rem; white-space: nowrap; text-overflow: ellipsis;}
 .home .bottom-bar ul li a.more {position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); width: 1.5rem; height: 1.5rem; background: url(../images/icon_arrow02.png) no-repeat center; vertical-align: middle;}
 
-/* section community */
-.community {background: url(../images/section02_bg.jpg) no-repeat center /cover;}
-.community .title {padding: 172px 0 53px;  }
+/* 생명보험협회 섹션 */
+.community {padding: 0 0 115px 0; height: auto; background: url(../images/section02_bg.jpg) no-repeat center /cover;}
+.community .title {padding: 172px 0 53px;}
 .community .row > article { float: left; padding: 0.5rem;}
 .community .row > article > div {border-radius: 20px; border: 1px solid #d4d5d8; background-color: #fff; overflow: hidden;}
 .community .row1 > article > div { height: 300px;}
@@ -146,7 +146,7 @@ header .spot .lang.on:before {content: 'KR'}
 .community-banner ul li {left: 0; width: 300px; height: 300px;}
 .community-banner ul li a { display: block; width: 100%; height: 100%;}
 .community-banner ul li a img { width: 100%; vertical-align: middle;}
-.community-banner .swiper-container {position: relative;}
+.community-banner .banner-slide {position: relative;}
 .community-banner .swiper-pagination {position: absolute; top: 0; right: 20px; left: initial !important; bottom: initial !important; width: initial !important; }
 .community-banner .swiper-pagination:before {content: ''; display: inline-block; margin-right: 4px; width: 8px; height: 10px; background: url(../images/icon_g.png) no-repeat 0 0; cursor: pointer;}
 .community-banner .swiper-pagination.on:before {background: url(../images/icon_g.png) no-repeat -18px 0;}
@@ -176,3 +176,40 @@ header .spot .lang.on:before {content: 'KR'}
 .community-quick2 ul li a span {position: absolute; left: 50%; bottom: 36px; transform: translateX(-50%); width: 5rem; height:1.3rem; line-height: 1.3rem; background: #92989b;  border-radius: 1.3rem; font-size: 15px; color: #fff; text-align: center; transition: all .3s;}
 .community-quick2 ul li a span:after {content: '\f061'; margin-left: .3rem; font-family: fontawesome; font-size: .6rem; vertical-align: .1rem;}
 .community-quick2 ul li a:hover span {background: #108ad3;}
+
+/* 회원사 섹션 */
+.member { background: url(../images/section05_bg.jpg);}
+.member .title {padding: 210px 0 110px;}
+.member .member-content li {float: left; padding: 0 10px; width: 16.6666%;}
+.member .member-content li a {display: block; margin: 0 auto; width: 180px; text-align: center;}
+.member .member-content li a span {display: block; border: 6px solid #fff; border-radius: 50%; transition: all .3s;}
+.member .member-content li a span img {width: 100%; vertical-align: middle;}
+.member .member-content li a:hover span {transform: scale(1.1);}
+.member .member-content li a:before {content: ''; width: 178px; height: 178px;}
+.member .member-content li a strong {display: block; padding: 30px 0 22px; font-family: 'NanumSquare', sans-serif; font-size: 21px; color: #000; font-weight: bold; line-height: 1.2em;}
+.member .member-content li a strong.r2 {padding: 16px 0 12px;}
+.member .member-content li a p {font-size: 15px; color: #666; line-height: 1.5em;}
+
+/* 파트너 섹션 */
+.partner {height: 100px; border-top:1px solid #d9d9d9; border-bottom: 1px solid #d9d9d9; overflow: hidden;}
+.partner .container {position: relative; overflow:hidden;}
+.partner ul {}
+.partner ul li {float: left; }
+.partner ul li a {display: block; height: 100px; text-align: center; }
+.partner ul li a img {height: 100%;}
+.partner .swiper-button-next {right: 0;}
+.partner .swiper-button-prev {left: 0;}
+.partner .swiper-button-next:after,
+.partner .swiper-button-prev:after {content:''; font-family: initial; width: 15px; height: 27px; }
+.partner .swiper-button-next:after {background: url(../images/icon_f_next.png) no-repeat center;}
+.partner .swiper-button-prev:after {background: url(../images/icon_f_prev.png) no-repeat center;}
+
+/* 푸터 */
+footer {padding: 40px 0 60px; background: #f3f4f5;}
+footer .foot-logo {float: left;}
+footer .foot-content {float: left;}
+.foot-logo {width: 135px; margin-right: 40px;}
+.foot-logo img {width: 100%; vertical-align: top;}
+.foot-content a {display: inline-block; padding: 0 0 8px; font-size: 15px; color: #000; font-weight: 500; vertical-align: top;}
+.foot-content address {font-size: 14px; color: #979797; line-height: 1.5em; font-weight: 500;}
+.foot-content span {font-size: 14px; color: #979797; font-weight: 500;}
