@@ -50,7 +50,7 @@ header .spot .lang.on:before {content: 'KR'}
 /* 모바일 메뉴 버튼 */
 .mobie-menu-btn {display: none; position: absolute; top: .8rem; right: 1.5rem; width: 2.5rem; height: 2.5rem; background-color: #ddd; border-radius: 5px;}
 /* 금융상품 비교공시 바로가기 */
-.compare {position: fixed; right: 1.5rem; top: 1.15rem; z-index: 1;}
+.compare {position: fixed; right: 3%; top: 1.15rem; z-index: 1;}
 .compare img {vertical-align: top;}
 
 /* 홈 섹션 */
@@ -73,8 +73,6 @@ header .spot .lang.on:before {content: 'KR'}
 .home .list2 > li > a {display: block; padding: 1.3rem 1.3rem 0; width: 100%; height: 9.5rem; background: #fff url(../images/icon_s0104.png) no-repeat right 1.3rem bottom 1.3rem; box-sizing: border-box;}
 .home .list2 > li > a h3 {padding: 0 0 .7rem; font-size: 1.4rem;}
 .home .list2 > li > a p {margin-bottom: .7rem; line-height: 1.6em; font-size: .75rem;}
-.home .list2 > li > a span {display: block; width: 6rem; height:1.5rem; line-height: 1.5rem; background: #0d2d4f;  border-radius: 1.5rem; font-size: 15px; color: #fff; text-align: center; transition: all .3s;}
-.home .list2 li a span:after {content: '\f061'; margin-left: .3rem; font-family: fontawesome; font-size: .6rem; vertical-align: .1rem;}
 .home .list2 li.other {padding: 0.5rem; }
 .home .list2 li.other div {background: #108ad3; border-radius: 1rem; height: 9.5rem;}
 .home .list2 li.other h3 {padding: 1.3rem 0 .65rem 1.3rem; font-size: .9rem; color: #fff;}
@@ -103,7 +101,7 @@ header .spot .lang.on:before {content: 'KR'}
 .home .bottom-bar ul li a.more {position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); width: 1.5rem; height: 1.5rem; background: url(../images/icon_arrow02.png) no-repeat center; vertical-align: middle;}
 
 /* 생명보험협회 섹션 */
-.community {padding: 0 0 115px 0; height: auto; background: url(../images/section02_bg.jpg) no-repeat center /cover;}
+.community {padding: 0 0 115px 0; background: url(../images/section02_bg.jpg) no-repeat center /cover;}
 .community .title {padding: 172px 0 53px;}
 .community .row > article { float: left; padding: 0.5rem;}
 .community .row > article > div {border-radius: 20px; border: 1px solid #d4d5d8; background-color: #fff; overflow: hidden;}
@@ -142,7 +140,7 @@ header .spot .lang.on:before {content: 'KR'}
 .community-quick li a:hover:before {transform: scale(1.1); box-shadow: 0 0 .4rem .15rem rgba(0, 0, 0, 0.3);}
 /* 팝업광고 */
 .community .row .community-banner > div {}
-.community-banner ul { position: relative; }
+.community-banner ul { position: relative;}
 .community-banner ul li {left: 0; width: 300px; height: 300px;}
 .community-banner ul li a { display: block; width: 100%; height: 100%;}
 .community-banner ul li a img { width: 100%; vertical-align: middle;}
@@ -177,8 +175,35 @@ header .spot .lang.on:before {content: 'KR'}
 .community-quick2 ul li a span:after {content: '\f061'; margin-left: .3rem; font-family: fontawesome; font-size: .6rem; vertical-align: .1rem;}
 .community-quick2 ul li a:hover span {background: #108ad3;}
 
+/* 소비자 섹션 */
+.consumer {padding: 183px 0 154px;}
+.consumer .title {margin-top: 24px; padding: 0 0 52px 0; text-align: left;}
+.consumer .title.bar h2:before {top: -1.15rem; left: 0; transform: initial;}
+.consumer article {float: left; padding: 10px; width: 50%;}
+.consumer .consumer-heading ul li {float: left; margin-right: 34px; width: calc(50% - 17px); border-bottom: 1px solid #e1e1e1;}
+.consumer .consumer-heading ul li:nth-child(2n) {margin-right: 0;}
+.consumer .consumer-heading ul li a {display: block; height: 40px; line-height: 40px; font-size: 16px; color: #505050; font-weight: 400;}
+.consumer .consumer-heading ul li a:before {content:''; display: inline-block; margin: 0 6px 0 4px; width: 18px; height: 18px; border-radius: 50%; background: #1c1c1c url(../images/icon_arrow01.png) no-repeat center; vertical-align: -3px;}
+.consumer .consumer-bg span {display: block; height: 345px; background: url(../images/s03_bg.jpg) no-repeat center /cover; border-radius: 20px;}
+.consumer .consumer-list {width: 100%; padding: 0;}
+.consumer .consumer-list ul li {float: left; padding: 10px; width: 25%; }
+.consumer .consumer-list ul li a {position: relative; display: block; padding: 1.3rem 1.3rem 0; width: 100%; height: 205px; box-sizing: border-box; border: 1px solid #d4d5d8; border-radius: 20px; transition: all .3s;}
+.consumer .consumer-list ul li:nth-of-type(2n) a {background: #f6f8fa;}
+.consumer .consumer-list ul li a:after {content: ''; position: absolute; right: 16px; bottom: 20px; width: 98px; height: 78px; background: url(../images/icon_s0301.png) no-repeat center; }
+.consumer .consumer-list ul li:nth-of-type(1) a:after {background-image: url(../images/icon_s0301.png);}
+.consumer .consumer-list ul li:nth-of-type(2) a:after {background-image: url(../images/icon_s0302.png);}
+.consumer .consumer-list ul li:nth-of-type(3) a:after {background-image: url(../images/icon_s0303.png);}
+.consumer .consumer-list ul li:nth-of-type(4) a:after {background-image: url(../images/icon_s0304.png);}
+.consumer .consumer-list ul li a h3 {padding: 0 0 16px; font-size: 1.2rem;}
+.consumer .consumer-list ul li a p {margin-bottom: 34px; line-height: 1.4em; font-size: .75rem; color: #838383;}
+/* hover */
+.consumer .consumer-list ul li a:hover {background: #108ad3;}
+.consumer .consumer-list ul li a:hover h3 {color: #fff;}
+.consumer .consumer-list ul li a:hover p {color: #fff;}
+.consumer .consumer-list ul li a:hover .btn-style01 {background:#fff; color: #000;}
+
 /* 모집종사자 섹션 */
-.manager {padding-bottom: 172px; height: auto; background: url(../images/section04_bg.jpg);}
+.manager {padding-bottom: 172px; background: url(../images/section04_bg.jpg);}
 .manager .title {padding: 228px 0 62px;}
 .manager .manager-content li {float: left; padding: 10px; width: 25%;}
 .manager .manager-content li a {position: relative; display: block; padding: 40px 35px; height: 430px; background: #fff; border-radius: 20px;overflow: hidden;}

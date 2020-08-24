@@ -1,18 +1,22 @@
 @charset "utf-8";
 
-@media screen and (max-width: 1580px) {
+@media screen and (max-width: 1630px) {
 
   /* 금융상품 비교공시 바로가기 */
   .compare {top: 5rem;}
 
 }
 @media screen and (max-width: 1280px) {
+  section {height: auto;}
+
   /* 헤더 */
   header nav {width: calc(100% - 195px);}
   header nav > ul > li {width: 25%;}
   header nav > ul > li > a {padding: 0;}
   /* 헤더 유틸리티 */
   header .spot {display: none;}
+  /* 금융상품 비교공시 바로가기 */
+  .compare {right: 2%;}
 
   /* 홈 섹션 */
   .home .bottom-bar {display: none;}
@@ -51,6 +55,15 @@
   .community .community-quick ul {padding: 20% 6%;}
   .community .community-banner ul li {width: 100%; height: 100%;}
   .community .community-banner ul li a img {height: 100%;}
+
+  /* 소비자 섹션 */
+  .consumer {padding: 90px 0; height: auto;}
+  .consumer article {float: none; width: 100%;}
+  .consumer .consumer-bg {display: none;}
+  .consumer .consumer-list ul li a:after {content: ''; position: absolute;  right:0; left:50%; bottom: initial; top: 36px; transform: translateX(-50%);}
+  .consumer .consumer-list ul li a h3 {padding-top: 110px; text-align: center;}
+  .consumer .consumer-list ul li a p {display: none;}
+  .consumer .consumer-list .btn-style01 {display: none;}
 
   /* 모집종사자 섹션 */
   .manager {padding-bottom: 90px; height: auto; background: url(../images/section04_bg.jpg);}
