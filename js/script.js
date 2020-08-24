@@ -28,8 +28,8 @@ $('.lang').click(function(){
   $(this).toggleClass('on');
 });
 
-//swiper 슬라이드
-var swiper = new Swiper('.swiper-container', {
+//community-banner 슬라이드
+var swiper = new Swiper('.banner-slide', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -38,5 +38,19 @@ var swiper = new Swiper('.swiper-container', {
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
+  },
+});
+
+//partner 슬라이드
+var swiper = new Swiper('.partner-slide', {
+  slidesPerView: 7,
+  spaceBetween: 0,
+  slidesPerGroup: 1,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  autoplay: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
