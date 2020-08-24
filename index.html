@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>생명보험협회</title>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsible.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/responsible.css">
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
@@ -261,43 +262,50 @@
           <article class="community-news">
             <div>
               <h3><span class="hide">뉴스 탭메뉴</span></h3>
-              <ul class="news-category">
-                <li class="on"><button>공지사항</button></li>
-                <li><button>보도자료</button></li>
+              <!-- 탭메뉴 -->
+              <ul class="news-category clear">
+                <li class="mo"><button>공지사항</button></li>
+                <li class="on"><button>보도자료</button></li>
                 <li><button>회원사소식</button></li>
               </ul>
               <!-- 공지사항 -->
-              <ul class="news-contents">
-                <li><a href="#a"><입찰공고> 골든펠로우 인증패, ID카드, 뱃지, 트로피, 기념서신 제작 및 발송</a><span>2020-08-11</span></li>
-                <li><a href="#a"><입찰공고> 금융보험 학교 방문교육 및 체험·진로학습 기념품 제작(카드형 USB)</a><span>2020-08-11</span></li>
-                <li><a href="#a">보험업법 위반자 처분내용 공고</a><span>2020-07-27</span></li>
-                <li><a href="#a"><입찰공고> 비시장성지분증권의 공정가치 평가기관 선정</a><span>2020-07-13</span></li>
-                <li><a href="#a">2020년도 생명보험협회 신입직원 채용 인적성검사 실시 안내</a><span>2020-06-03</span></li>
-                <li><a href="#a">2020년도 해외박사과정 생명보험사회공헌장학생 선발</a><span>2020-05-13</span></li>
-              </ul>
-              <a href="#a" class="news-more">MORE</a>
+              <div class="news-contents-container">
+                <ul class="news-contents">
+                  <li><a href="#a"><입찰공고> 골든펠로우 인증패, ID카드, 뱃지, 트로피, 기념서신 제작 및 발송</a><span>2020-08-11</span></li>
+                  <li><a href="#a"><입찰공고> 금융보험 학교 방문교육 및 체험·진로학습 기념품 제작(카드형 USB)</a><span>2020-08-11</span></li>
+                  <li><a href="#a">보험업법 위반자 처분내용 공고</a><span>2020-07-27</span></li>
+                  <li><a href="#a"><입찰공고> 비시장성지분증권의 공정가치 평가기관 선정</a><span>2020-07-13</span></li>
+                  <li><a href="#a">2020년도 생명보험협회 신입직원 채용 인적성검사 실시 안내</a><span>2020-06-03</span></li>
+                  <li><a href="#a">2020년도 해외박사과정 생명보험사회공헌장학생 선발</a><span>2020-05-13</span></li>
+                </ul>
+                <a href="#a" class="news-more">MORE</a>
+              </div>
               <!-- //공지사항 -->
               <!-- 보도자료 -->
-              <ul class="news-contents">
-                <li><a href="#a">[보도자료] 불확실한 시대의 확실한 대안 변액보험</a><span>2020-07-29</span></li>
-                <li><a href="#a">[보도자료]보험민원 제기를 권유하며 수수료를 요구하는 민원대행업체를 유의하세요</a><span>2020-07-23</span></li>
-                <li><a href="#a">[보도자료] 한국인 주요 사망원인 1위 중대질병 진료비 증가, CI GI 보험으로 치료비 생활비 걱정은 감소</a><span>2020-07-22</span></li>
-                <li><a href="#a">생,손보협회, 2020년도 우수인증설계사 31,919명 선정</a><span>2020-05-29</span></li>
-                <li><a href="#a">[보도해명자료] 금융소비자연맹, '연금저축 수익률, 수수료 빼면 마이너스' 보도자료 관련</a><span>2020-05-13</span></li>
-                <li><a href="#a">[보도자료] 포스트 코로나, 생보사 언택트 건강관리 서비스 주목</a><span>2020-05-06</span></li>
-              </ul>
-              <a href="#a" class="news-more">MORE</a>
+              <div class="news-contents-container on">
+                <ul class="news-contents">
+                  <li><a href="#a">[보도자료] 불확실한 시대의 확실한 대안 변액보험</a><span>2020-07-29</span></li>
+                  <li><a href="#a">[보도자료]보험민원 제기를 권유하며 수수료를 요구하는 민원대행업체를 유의하세요</a><span>2020-07-23</span></li>
+                  <li><a href="#a">[보도자료] 한국인 주요 사망원인 1위 중대질병 진료비 증가, CI GI 보험으로 치료비 생활비 걱정은 감소</a><span>2020-07-22</span></li>
+                  <li><a href="#a">생,손보협회, 2020년도 우수인증설계사 31,919명 선정</a><span>2020-05-29</span></li>
+                  <li><a href="#a">[보도해명자료] 금융소비자연맹, '연금저축 수익률, 수수료 빼면 마이너스' 보도자료 관련</a><span>2020-05-13</span></li>
+                  <li><a href="#a">[보도자료] 포스트 코로나, 생보사 언택트 건강관리 서비스 주목</a><span>2020-05-06</span></li>
+                </ul>
+                <a href="#a" class="news-more">MORE</a>
+              </div>
               <!-- //보도자료 -->
               <!-- 회원사소식 -->
-              <ul class="news-contents">
-                <li><a href="#a">RGA재보험, 국내 아프리카 난민에게 긴급구호키트 전달</a><span>2020-08-10</span></li>
-                <li><a href="#a">교보라이프플래닛, 「핀테크산업협회」 가입</a><span>2020-08-10</span></li>
-                <li><a href="#a">교보라이프플래닛, 블록체인 헬스케어 플랫폼 HAU 합류</a><span>2020-08-10</span></li>
-                <li><a href="#a">BNP파리바 카디프생명, 대출안심보험 지급사례 영상 시리즈 공개</a><span>2020-08-10</span></li>
-                <li><a href="#a">오렌지라이프, 빅데이터 모델 활용한 「우대심사 서비스」 론칭</a><span>2020-08-10</span></li>
-                <li><a href="#a">신한생명, 오렌지라이프와 「NewLife 변화관리 워크숍」 개최</a><span>2020-08-10</span></li>
-              </ul>
-              <a href="#a" class="news-more">MORE</a>
+              <div class="news-contents-container">
+                <ul class="news-contents">
+                  <li><a href="#a">RGA재보험, 국내 아프리카 난민에게 긴급구호키트 전달</a><span>2020-08-10</span></li>
+                  <li><a href="#a">교보라이프플래닛, 「핀테크산업협회」 가입</a><span>2020-08-10</span></li>
+                  <li><a href="#a">교보라이프플래닛, 블록체인 헬스케어 플랫폼 HAU 합류</a><span>2020-08-10</span></li>
+                  <li><a href="#a">BNP파리바 카디프생명, 대출안심보험 지급사례 영상 시리즈 공개</a><span>2020-08-10</span></li>
+                  <li><a href="#a">오렌지라이프, 빅데이터 모델 활용한 「우대심사 서비스」 론칭</a><span>2020-08-10</span></li>
+                  <li><a href="#a">신한생명, 오렌지라이프와 「NewLife 변화관리 워크숍」 개최</a><span>2020-08-10</span></li>
+                </ul>
+                <a href="#a" class="news-more">MORE</a>
+              </div>
               <!-- //회원사소식 -->
             </div>
           </article>
