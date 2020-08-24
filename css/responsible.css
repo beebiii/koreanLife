@@ -52,10 +52,16 @@
   .community .community-banner ul li {width: 100%; height: 100%;}
   .community .community-banner ul li a img {height: 100%;}
 
+  /* 모집종사자 섹션 */
+  .manager {padding-bottom: 90px; height: auto; background: url(../images/section04_bg.jpg);}
+  .manager .title {padding: 108px 0 62px;}
+  .manager .manager-content li {width: 50%;}
+
   /* 회원사 섹션 */
   .member {height: auto;}
   .member .title {padding: 108px 0 110px;}
   .member .member-content li {padding: 0 0 176px; width: 33.3333%;}
+  .manager .manager-content li a {padding-bottom: 100%;}
 }
 
 @media screen and (max-width: 990px) {
