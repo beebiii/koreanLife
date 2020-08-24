@@ -2,8 +2,10 @@
 
 /* 공통 */
 .container {margin: 0 auto; width: 95%; max-width: 1260px;}
-section .container {max-width: 1280px;}
+section .container { width: 97%; max-width: 1280px;}
 section {width: 100%; height: 100vh; }
+
+/* 문자 스타일 */
 .title {text-align: center; font-family: 'NanumSquare', sans-serif;}
 .title.white {color: #fff;}
 .title p {font-size: .9rem; padding: 0 0 1rem 0;}
@@ -13,6 +15,10 @@ section {width: 100%; height: 100vh; }
 section h3 {font-family: 'NanumSquare', sans-serif;}
 .mo {display: none;}
 strong {font-family: 'NanumSquare', sans-serif;;}
+
+/* 버튼 스타일 */
+.btn-style01 {display: block; width: 6rem; height:1.5rem; line-height: 1.5rem; background: #0d2d4f;  border-radius: 1.5rem; font-size: 15px; color: #fff; text-align: center; transition: all .3s;}
+.btn-style01:after {content: '\f061'; margin-left: .3rem; font-family: fontawesome; font-size: .6rem; vertical-align: .1rem;}
 
 /* primary-color: #108ad3; */
 /* secondary-color: #d82744; */
