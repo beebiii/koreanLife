@@ -10,7 +10,7 @@
   section {height: auto;}
 
   /* 헤더 */
-  header nav {width: calc(100% - 195px);}
+  header nav {width: calc(100% - 9.75rem);}
   header nav > ul > li {width: 25%;}
   header nav > ul > li > a {padding: 0;}
   /* 헤더 유틸리티 */
@@ -23,7 +23,7 @@
 
   /* 푸터 */
   footer .foot_logo {float: none;}
-  footer .foot_content {float: none; padding: 8px 0 0;}
+  footer .foot_content {float: none; padding: .4rem 0 0;}
 }
 
 @media screen and (max-width: 1200px) {
@@ -31,8 +31,8 @@
   .mo {display: block;}
 
   /* 홈섹션 */
-  .home {padding: 0 0 4rem; height: auto;}
-  .home .title {padding-top: 206px;}
+  .home {padding: 0 0 .2rem; height: auto;}
+  .home .title {padding-top: 10.3rem;}
   .home .list > li > a {border-radius: .5rem;}
   .home .list1 {position: initial; width: 100%;}
   .home .list2 {position: initial; width: 100%; overflow: hidden;}
@@ -41,8 +41,8 @@
   .home .list2 li.other div {border-radius: .5rem;}
 
   /* 생명보험협회 섹션 */
-  .community {padding: 0 0 4rem 0; height: auto;}
-  .community .title {padding-top: 108px;}
+  .community {padding: 0 0 .2rem 0; height: auto;}
+  .community .title {padding-top: 5.4rem;}
   .community .row > article > div {border-radius: 10px;}
   .community .row2 { display: none;}
   .community .community-news {width: 100%;}
@@ -57,23 +57,23 @@
   .community .community-banner ul li a img {height: 100%;}
 
   /* 소비자 섹션 */
-  .consumer {padding: 90px 0; height: auto;}
+  .consumer {padding: 4.5rem 0; height: auto;}
   .consumer article {float: none; width: 100%;}
   .consumer .consumer-bg {display: none;}
-  .consumer .consumer-list ul li a:after {content: ''; position: absolute;  right:0; left:50%; bottom: initial; top: 36px; transform: translateX(-50%);}
-  .consumer .consumer-list ul li a h3 {padding-top: 110px; text-align: center;}
+  .consumer .consumer-list ul li a:after {content: ''; position: absolute;  right:0; left:50%; bottom: initial; top: 1.8rem; transform: translateX(-50%);}
+  .consumer .consumer-list ul li a h3 {padding-top: 5.5rem; text-align: center;}
   .consumer .consumer-list ul li a p {display: none;}
   .consumer .consumer-list .btn-style01 {display: none;}
 
   /* 모집종사자 섹션 */
-  .manager {padding-bottom: 90px; height: auto; background: url(../images/section04_bg.jpg);}
-  .manager .title {padding: 108px 0 62px;}
+  .manager {padding-bottom: 4.5rem; height: auto; background: url(../images/section04_bg.jpg);}
+  .manager .title {padding: 5.4rem 0 3.1rem;}
   .manager .manager-content li {width: 50%;}
 
   /* 회원사 섹션 */
   .member {height: auto;}
-  .member .title {padding: 108px 0 110px;}
-  .member .member-content li {padding: 0 0 176px; width: 33.3333%;}
+  .member .title {padding: 5.4rem 0 5.5rem;}
+  .member .member-content li {padding: 0 0 8.8rem; width: 33.3333%;}
   .manager .manager-content li a {padding-bottom: 100%;}
 }
 
