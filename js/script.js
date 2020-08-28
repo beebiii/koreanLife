@@ -1,4 +1,4 @@
-// 하위메뉴
+// 메뉴 마우스오버시 하위메뉴
 var menu = $('nav > ul > li');
 
 menu.mouseenter(function(){
@@ -28,6 +28,19 @@ $('.lang').click(function(){
   $(this).toggleClass('on');
 });
 
+//사이트맵 모달창
+var sitemapBtn = $('.sitemap-btn');
+var sitemap = $('.sitemap-content');
+var sitemapClose = sitemap.find('.close');
+
+sitemapBtn.click(function(){
+  sitemap.show();
+});
+sitemapClose.click(function(){
+  sitemap.hide();
+})
+
+//swiper
 //community-banner 슬라이드
 var swiper = new Swiper('.banner-slide', {
   pagination: {
@@ -48,9 +61,27 @@ var swiper = new Swiper('.partner-slide', {
   slidesPerGroup: 1,
   loop: true,
   loopFillGroupWithBlank: true,
-  autoplay: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+});
+
+//location button
+var locationBtn = $('.location-btn');
+
+$(window).scroll(function(){
+  if($(document).scrollTop() > 50) {
+    locationBtn.addClass('on');
+  } else {
+    locationBtn.removeClass('on');
+  }
+});
+$('.top').click(function(){
+  $('html, body').stop().animate({scrollTop : 0}, 400);
+  return false;
 });
