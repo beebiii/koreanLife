@@ -29,6 +29,12 @@
   /* 푸터 */
   footer .foot_logo {float: none; width: 100%;}
   footer .foot_content {float: none; padding: .4rem 0 0; width: 100%;}
+
+  /* 페이저 */
+  .pager {display: none;}
+  .location-btn {bottom: 1.4rem;}
+  .location-btn .prev,
+  .location-btn .next {display: none;}
 }
 
 @media screen and (max-width: 1200px) {
@@ -127,3 +133,4 @@
   /* 모바일 메뉴 버튼 */
   .mobie-menu-btn {display: block;}
 }
+
