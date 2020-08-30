@@ -7,7 +7,7 @@ menu.mouseenter(function(){
   var htmlFont = $('html').css('fontSize').replace('px', '');
   var htmlFontNum = Number(htmlFont);
 
-  $('.sub-menu').hide();
+  $('header .sub-menu').hide();
   subMenu.show();
   $('header').stop().animate({
     height: (subMenuHeight / htmlFontNum) + 4 +'rem',
@@ -16,7 +16,7 @@ menu.mouseenter(function(){
   }, 400);
 });
 menu.mouseleave(function(){
-  $('.sub-menu').hide();
+  $('header .sub-menu').hide();
   $('header').stop().animate({
     height: 4+'rem',
     borderBottomWidth : '1px'
@@ -35,10 +35,50 @@ var sitemapClose = sitemap.find('.close');
 
 sitemapBtn.click(function(){
   sitemap.show();
+  $('html').css({overflow: 'hidden'});
 });
 sitemapClose.click(function(){
   sitemap.hide();
+  $('html').css({overflow: 'auto'});
 })
+
+//홈섹션 - 메뉴 클릭시 섹션 이동
+$('.page-ani').click(function(e){
+  e.preventDefault();
+  var pageLink = $(this).attr('href');
+  var pageContent = $('section').filter(pageLink).offset().top;
+
+  $('html, body').stop().animate({scrollTop: pageContent});
+});
+
+//location button
+var locationBtn = $('.location-btn');
+
+$(window).scroll(function(){
+  if($(document).scrollTop() > 50) {
+    locationBtn.addClass('on');
+  } else {
+    locationBtn.removeClass('on');
+  }
+});
+$('.top').click(function(){
+  $('html, body').stop().animate({scrollTop : 0}, 400);
+  return false;
+});
+
+//pager
+$('.pager ul li').click(function(e){
+  $(this).addClass('on').siblings().removeClass('on');
+  
+  e.preventDefault();
+  var pageLink = $(this).find('a').attr('href');
+  var pageContent = $('section').filter(pageLink).offset().top;
+
+  $('html, body').stop().animate({scrollTop: pageContent});
+  $('section').removeClass('animation');
+  $('section').filter(pageLink).addClass('animation');
+});
+
 
 //swiper
 //community-banner 슬라이드
@@ -56,7 +96,7 @@ var swiper = new Swiper('.banner-slide', {
 
 //partner 슬라이드
 var swiper = new Swiper('.partner-slide', {
-  slidesPerView: 7,
+  slidesPerView: 3,
   spaceBetween: 0,
   slidesPerGroup: 1,
   loop: true,
@@ -69,19 +109,15 @@ var swiper = new Swiper('.partner-slide', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-});
-
-//location button
-var locationBtn = $('.location-btn');
-
-$(window).scroll(function(){
-  if($(document).scrollTop() > 50) {
-    locationBtn.addClass('on');
-  } else {
-    locationBtn.removeClass('on');
+  breakpoints: {
+    769 : {
+      slidesPerView: 4
+    },
+    901 : {
+      slidesPerView: 5
+    },
+    1201 : {
+      slidesPerView: 7
+    }
   }
-});
-$('.top').click(function(){
-  $('html, body').stop().animate({scrollTop : 0}, 400);
-  return false;
 });
