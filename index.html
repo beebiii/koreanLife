@@ -170,7 +170,7 @@
     </header>
     <!-- //헤더 -->
     <!--홈 섹션 -->
-    <section class="home">
+    <section id="home" class="home animation">
       <div class="title white">
         <p>"New Value Creation"</p>
         <h2>생명보험 산업의 새로운 가치 창출</h2>
@@ -178,7 +178,7 @@
       <div class="container clear">
         <ul class="list list1 clear">
           <li>
-            <a href="#consumer">
+            <a href="#consumer" class="page-ani" title="소비자 컨텐츠 바로가기">
               <h3>소비자</h3>
               <p>
                 생명보험소비자가<br>
@@ -187,7 +187,7 @@
             </a>
           </li>
           <li>
-            <a href="#manager">
+            <a href="#manager" class="page-ani" title="모집종사자 컨텐츠 바로가기">
               <h3>모집종사자</h3>
               <p>
                 보험고객의 미래를 설계하는<br>
@@ -196,7 +196,7 @@
             </a>
           </li>
           <li>
-            <a href="#member">
+            <a href="#member" class="page-ani" title="회원사 컨텐츠 바로가기">
               <h3>회원사</h3>
               <p>
                 보험문화 확산을 위한<br>
@@ -207,7 +207,7 @@
         </ul>
         <ul class="list list2">
           <li>
-            <a href="#community">
+            <a href="#community" class="page-ani" title="생명보험협회 컨텐츠 바로가기">
               <h3>생명보험협회</h3>
               <p>
                 보험가입자의 권익보호 및<br>
@@ -579,11 +579,11 @@
     <!-- 페이저 & 탑버튼 -->
     <div class="pager">
       <ul>
-        <li class="on"><button>HOME</button></li>
-        <li><button>생명보험협회</button></li>
-        <li><button>소비자</button></li>
-        <li><button>모집종사자</button></li>
-        <li><button>회원사</button></li>
+        <li class="on"><a href="#home" title="홈영역 바로가기">HOME</a></li>
+        <li><a href="#community" title="생명보험협회영역 바로가기">생명보험협회</a></li>
+        <li><a href="#consumer" title="소비자영역 바로가기">소비자</a></li>
+        <li><a href="#manager" title="모집종사자영역 바로가기">모집종사자</a></li>
+        <li><a href="#member" title="회원사영역 바로가기">회원사</a></li>
       </ul>
     </div>
     <div class="location-btn">
@@ -600,7 +600,7 @@
         <ul class="top-menu">
           <li class="clear">
             <h2>소비자</h2>
-            <ul class="sub-menu clear">
+            <ul class="sub-menu">
               <li><a href="#a">소비자포털</a></li>
               <li><a href="#a">내보험찾아줌</a></li>
               <li><a href="#a">공시실</a></li>
@@ -636,7 +636,7 @@
           </li>
           <li class="clear">
             <h2>모집종사자</h2>
-            <ul class="sub-menu clear">
+            <ul class="sub-menu">
               <li><a href="#a">모집종사자 관련서비스</a>
                 <ul class="sub-menu2">
                   <li><a href="#a">모집종사자 관련안내 및 조회</a></li>
@@ -657,7 +657,7 @@
           </li>
           <li class="clear">
             <h2>회원사</h2>
-            <ul class="sub-menu clear">
+            <ul class="sub-menu">
               <li><a href="#a">생명보험상품 광고심의</a>
                 <ul class="sub-menu2">
                   <li><a href="#a">과장광고신고센터</a></li>
@@ -700,7 +700,7 @@
           </li>
           <li class="clear">
             <h2>생명보험협회</h2>
-            <ul class="sub-menu clear">
+            <ul class="sub-menu">
               <li><a href="#a">협회소개</a>
                 <ul class="sub-menu2">
                   <li><a href="#a">협회장인사말</a></li>
