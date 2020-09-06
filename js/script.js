@@ -1,5 +1,6 @@
 // 메뉴 마우스오버시 하위메뉴
 var menu = $('nav > ul > li');
+var width = $(window).innerWidth();
 
 menu.mouseenter(function(){
   var subMenu = $(this).find('.sub-menu');
@@ -51,33 +52,96 @@ $('.page-ani').click(function(e){
   $('html, body').stop().animate({scrollTop: pageContent});
 });
 
-//location button
-var locationBtn = $('.location-btn');
-
-$(window).scroll(function(){
-  if($(document).scrollTop() > 50) {
-    locationBtn.addClass('on');
-  } else {
-    locationBtn.removeClass('on');
-  }
-});
+//탑버튼 클릭시 최상단으로 이동
 $('.top').click(function(){
   $('html, body').stop().animate({scrollTop : 0}, 400);
-  return false;
 });
 
 //pager
 $('.pager ul li').click(function(e){
-  $(this).addClass('on').siblings().removeClass('on');
-  
   e.preventDefault();
-  var pageLink = $(this).find('a').attr('href');
-  var pageContent = $('section').filter(pageLink).offset().top;
+  $(this).addClass('on').siblings().removeClass('on');
+  var idx = $(this).index();
+  var section = $('section').eq(idx);
+  var sectionTop = section.offset().top;
 
-  $('html, body').stop().animate({scrollTop: pageContent});
+  $('html, body').stop().animate({scrollTop: sectionTop}, 400);
   $('section').removeClass('animation');
-  $('section').filter(pageLink).addClass('animation');
+  section.addClass('animation');
 });
+
+//fullpage
+var lastSecond = $('section').eq(-2).offset().top;
+var footerHeight = $('footer').innerHeight();
+
+//섹션위치에 따른 페이저 active
+$(window).scroll(function(){
+  var currentScroll = $(window).scrollTop();
+
+  $('section').each(function(index){
+    $('section').removeClass('animation');
+    if(currentScroll > lastSecond) {
+      $('.pager ul li').removeClass('on');
+    } else if(currentScroll >= $(this).offset().top) {
+      $('.pager ul li').eq(index).addClass('on').siblings().removeClass('on');
+      $(this).addClass('animation');
+    }
+  })
+});
+
+//마우스휠 / 위아래버튼 눌렀을 때
+$('body').on('mousewheel', function(e){
+  var wheelDirect = e.originalEvent.wheelDelta;
+   
+  if ((wheelDirect > 0) && ($(window).scrollTop() > lastSecond)) {
+    pageUpLast()
+  } else if (wheelDirect < 0){
+    pageDown();
+  } else {
+    pageUp();
+  }
+})
+$('.next').click(function(){
+  if( $(window).scrollTop = 0 ){
+    return
+  } else {
+    pageDown();
+  }
+});
+$('.prev').click(function(){
+  if( $(window).scrollTop > lastSecond ){
+    pageUpLast()
+  } else {
+    pageUp()
+  }
+});
+
+function pageDown() {
+  $('html, body').stop().animate({
+    scrollTop: $(window).scrollTop() + $(window).height()
+  }, 400);
+}
+function pageUp() {
+  $('html, body').stop().animate({
+    scrollTop: $(window).scrollTop() - $(window).height()
+  }, 400);
+}
+function pageUpLast() {
+  $('html, body').stop().animate({
+    scrollTop: lastSecond
+  }, 400);
+}
+
+// 탭메뉴
+var tabButton = $('.news-category li');
+var newsContent = $('.news-contents-container');
+
+$(tabButton).click(function(){
+  $(this).addClass('on').siblings().removeClass('on');
+  var tabButtonProp = $(this).attr('aria-controls');
+  $(newsContent).filter('#'+tabButtonProp).addClass('on').siblings().removeClass('on');
+});
+
 
 
 //swiper
