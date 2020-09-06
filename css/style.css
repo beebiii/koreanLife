@@ -51,7 +51,7 @@ header .spot .lang.on:before {content: 'KR'}
 .search button {position: relative; width: 2rem; height: 2rem; line-height: 2rem; border-radius: 0 50% 50% 0; background-color: #e8e9eb; vertical-align: middle;}
 .search button:before {content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: .8rem; height: .8rem; background: url(../images/icon_g.png) left -32px top 0;}
 /* 모바일 메뉴 버튼 */
-.mobie-menu-btn {display: none; position: absolute; top: .8rem; right: 1.5rem; width: 2.5rem; height: 2.5rem; background-color: #ddd; border-radius: 5px;}
+.mobile-menu-btn {display: none; position: absolute; top: .8rem; left: 1.5rem; width: 2.5rem; height: 2.5rem; background-color: #ddd; border-radius: 5px;}
 /* 금융상품 비교공시 바로가기 */
 .compare {position: fixed; right: 3%; top: 1.15rem; z-index: 1;}
 .compare img {vertical-align: top;}
@@ -62,8 +62,7 @@ header .spot .lang.on:before {content: 'KR'}
 .home.animation .title p {animation: toTop .4s .2s 1 ease-out forwards; opacity: 0;}
 .home.animation .title h2 {animation: toTop .4s .4s 1 ease-out forwards; opacity: 0;}
 .home .container {position: relative;}
-.home .list {opacity: 0;}
-.home.animation .list {animation: fadeIn 1.3s .6s 1 ease-out forwards;}
+.home.animation .list {animation: fadeIn 1.3s .6s 1 ease-out forwards; opacity: 0;}
 .home .list > li {padding: .5rem; }
 .home .list > li h3 {font-size: 1.6rem;}
 .home .list > li p {font-size: .85rem; color: #a2a2a2; line-height: 1.2em;}
@@ -285,7 +284,7 @@ header .spot .lang.on:before {content: 'KR'}
 .partner .swiper-button-prev:after {background: url(../images/icon_f_prev.png) no-repeat center;}
 
 /* 푸터 */
-footer {padding: 2rem 0 3rem; background: #f3f4f5;}
+footer {padding: 2rem 0 2rem; background: #f3f4f5;}
 footer .foot-logo {float: left;}
 footer .foot-content {float: left;}
 .foot-logo {width: 6.75rem; margin-right: 2rem;}
