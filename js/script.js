@@ -33,15 +33,41 @@ $('.lang').click(function(){
 var sitemapBtn = $('.sitemap-btn');
 var sitemap = $('.sitemap-content');
 var sitemapClose = sitemap.find('.close');
+var mobileMenuBtn = $('.mobile-menu-btn');
 
 sitemapBtn.click(function(){
   sitemap.show();
   $('html').css({overflow: 'hidden'});
 });
 sitemapClose.click(function(){
-  sitemap.hide();
-  $('html').css({overflow: 'auto'});
+  if($(this).hasClass('mo')){
+    sitemap.removeClass('on');
+    $('.layer').removeClass('on');
+  } else {
+    sitemap.hide();
+    $('html').css({overflow: 'auto'});
+    $('.layer').removeClass('on');
+  }
 })
+mobileMenuBtn.click(function(){
+  sitemap.addClass('on');
+  $('.layer').addClass('on');
+});
+//모바일 사이트맵 아코디언 메뉴
+var topMenu = $('.sitemap-content .top-menu > li');
+var topMenuTitle = topMenu.find('h2');
+var subMenuList = topMenu.find('.sub-menu > li');
+
+topMenuTitle.click(function(){
+  $(this).toggleClass('on');
+  $(this).siblings('.sub-menu').slideToggle();
+  $(this).parent().siblings().find('.sub-menu').hide();
+});
+subMenuList.click(function(){
+  $(this).toggleClass('on');
+  $(this).find('.sub-menu2').slideToggle();
+})
+
 
 //홈섹션 - 메뉴 클릭시 섹션 이동
 $('.page-ani').click(function(e){
@@ -60,7 +86,6 @@ $('.top').click(function(){
 //pager
 $('.pager ul li').click(function(e){
   e.preventDefault();
-  $(this).addClass('on').siblings().removeClass('on');
   var idx = $(this).index();
   var section = $('section').eq(idx);
   var sectionTop = section.offset().top;
@@ -71,13 +96,40 @@ $('.pager ul li').click(function(e){
 });
 
 //fullpage
+var sectionInx = $('section').length;
+var height = $(window).height();
 var lastSecond = $('section').eq(-2).offset().top;
-var footerHeight = $('footer').innerHeight();
+//var lastSecond = height * 4
+//var sectionHeight = $('section').outerHeight();
+//var lastHeight = $('section').eq(-1).outerHeight() + $('footer').outerHeight();
 
 //섹션위치에 따른 페이저 active
 $(window).scroll(function(){
   var currentScroll = $(window).scrollTop();
 
+  /* if (currentScroll >= height * 0 && currentScroll < height * 1) {
+    $('.pager ul li').eq(0).addClass('on').siblings().removeClass('on');
+  } else if (currentScroll >= height * 1 && currentScroll < height * 2){
+    $('.pager ul li').eq(1).addClass('on').siblings().removeClass('on');
+  } else if (currentScroll >= height * 2 && currentScroll < height * 3){
+    $('.pager ul li').eq(2).addClass('on').siblings().removeClass('on');
+  } else if (currentScroll >= height * 3 && currentScroll < height * 4){
+    $('.pager ul li').eq(3).addClass('on').siblings().removeClass('on');
+  } else if (currentScroll = height * 4){
+    $('.pager ul li').eq(4).addClass('on').siblings().removeClass('on');
+  } else if (currentScroll > height * 4){
+    $('.pager ul li').removeClass('on');
+  } */
+  /* if(currentScroll > (height * 4) ) {
+    $('.pager ul li').removeClass('on');
+  } else {
+    for(var i = 0; i < sectionInx; i++){
+      if(currentScroll >= height * i && currentScroll < height * (i+1)){
+        $('.pager ul li').removeClass('on');
+        $('.pager ul li').eq(i).addClass('on');
+      }
+    }
+  } */
   $('section').each(function(index){
     $('section').removeClass('animation');
     if(currentScroll > lastSecond) {
@@ -90,26 +142,32 @@ $(window).scroll(function(){
 });
 
 //마우스휠 / 위아래버튼 눌렀을 때
-$('body').on('mousewheel', function(e){
+$('section').on('mousewheel', function(e){
   var wheelDirect = e.originalEvent.wheelDelta;
-   
-  if ((wheelDirect > 0) && ($(window).scrollTop() > lastSecond)) {
-    pageUpLast()
+
+  if (wheelDirect > 0) {
+    var prev = $(this).prev().offset().top;
+    if ($(window).scrollTop() > lastSecond) {
+      pageUpLast()
+    } else {
+      $('html, body').stop().animate({
+        scrollTop: prev
+      }, 400);
+      //pageUp();
+    }
   } else if (wheelDirect < 0){
-    pageDown();
-  } else {
-    pageUp();
-  }
+    var next = $(this).next().offset().top;
+    $('html, body').stop().animate({
+      scrollTop: next
+    }, 400);
+    //pageDown();
+  } 
 })
 $('.next').click(function(){
-  if( $(window).scrollTop = 0 ){
-    return
-  } else {
-    pageDown();
-  }
+  pageDown();
 });
 $('.prev').click(function(){
-  if( $(window).scrollTop > lastSecond ){
+  if( $(window).scrollTop() > lastSecond ){
     pageUpLast()
   } else {
     pageUp()
@@ -117,14 +175,10 @@ $('.prev').click(function(){
 });
 
 function pageDown() {
-  $('html, body').stop().animate({
-    scrollTop: $(window).scrollTop() + $(window).height()
-  }, 400);
+  $('html, body').stop().animate({scrollTop: $(window).scrollTop() + height}, 400); //화면 높이만큼 더하고 뺌 : offset값이랑 어긋나는 현상 -> 섹션기준으로 이전/다음 섹션의 offset값으로 이동 (섹션이외 영역에서 안 먹힘)
 }
 function pageUp() {
-  $('html, body').stop().animate({
-    scrollTop: $(window).scrollTop() - $(window).height()
-  }, 400);
+  $('html, body').stop().animate({scrollTop: $(window).scrollTop() - height}, 400);
 }
 function pageUpLast() {
   $('html, body').stop().animate({
@@ -141,9 +195,7 @@ $(tabButton).click(function(){
   var tabButtonProp = $(this).attr('aria-controls');
   $(newsContent).filter('#'+tabButtonProp).addClass('on').siblings().removeClass('on');
 });
-
-
-
+ 
 //swiper
 //community-banner 슬라이드
 var swiper = new Swiper('.banner-slide', {
