@@ -1,51 +1,188 @@
 @charset "utf-8";
 
-@media screen and (max-width: 1580px) {
+@media screen and (max-width: 1630px) {
 
-  /* 금융공시 바로가기 */
+  /* 금융상품 비교공시 바로가기 */
   .compare {top: 5rem;}
 
 }
 @media screen and (max-width: 1280px) {
+  section {height: auto;}
+
   /* 헤더 */
-  header nav {width: calc(100% - 195px);}
+  header nav {width: calc(100% - 9.75rem);}
   header nav > ul > li {width: 25%;}
   header nav > ul > li > a {padding: 0;}
-
-  /* 유틸리티 */
+  /* 헤더 유틸리티 */
   header .spot {display: none;}
+  /* 금융상품 비교공시 바로가기 */
+  .compare {right: 2.2%;}
 
-  /* section1 home */
+  /* 섹션 */
+  .home {padding: 10.25rem 0 25.5rem;}
   .home .bottom-bar {display: none;}
+  .community {padding: 6.4rem 0 5rem;}
+  .consumer {padding: 5rem 0;}
+  .manager {padding: 6.4rem 0 5rem;}
+  .member {padding: 6.4rem 0 11.3rem;}
+
+  /* 푸터 */
+  footer .foot_logo {float: none; width: 100%;}
+  footer .foot_content {float: none; padding: .4rem 0 0; width: 100%;}
+
+  /* 페이저 */
+  .pager {display: none;}
+  .location-btn {bottom: 1.4rem;}
+  .location-btn .prev,
+  .location-btn .next {display: none;}
 }
 
 @media screen and (max-width: 1200px) {
-  /* section1 home */
-  .home {padding-bottom: 4rem; height: auto;}
+  /* 공통 */
+  .mo {display: block;}
+
+  /* 홈섹션 */
+  .home {padding-bottom: 4rem;}
   .home .list > li > a {border-radius: .5rem;}
   .home .list1 {position: initial; width: 100%;}
   .home .list2 {position: initial; width: 100%; overflow: hidden;}
   .home .list2 > li {float: left; width: 33.3333%;}
   .home .list2 li.other {width: 66.6666%; }
   .home .list2 li.other div {border-radius: .5rem;}
+
+  /* 생명보험협회 섹션 */
+  .community .row > article > div {border-radius: 10px;}
+  .community .row2 { display: none;}
+  .community .community-news {width: 100%;}
+  .community .community-quick,
+  .community .community-banner {position: relative; width: 50%; height: auto; overflow: none;}
+  .community .community-quick > div,
+  .community .community-banner > div {padding-bottom: 100%;}
+  .community .community-quick ul,
+  .community .community-banner ul {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+  .community .community-quick ul {padding: 20% 6%;}
+  .community .community-banner ul li {width: 100%; height: 100%;}
+  .community .community-banner ul li a img {height: 100%;}
+
+  /* 소비자 섹션 */
+  .consumer {padding: 4.5rem 0; height: auto;}
+  .consumer article {float: none; width: 100%;}
+  .consumer .consumer-bg {display: none;}
+  .consumer .consumer-list ul li a {border-radius: .5rem}
+  .consumer .consumer-list ul li a:after {content: ''; position: absolute;  right:0; left:50%; bottom: initial; top: 1.8rem; transform: translateX(-50%);}
+  .consumer .consumer-list ul li a h3 {padding-top: 5.5rem; text-align: center;}
+  .consumer .consumer-list ul li a p {display: none;}
+  .consumer .consumer-list .btn-style01 {display: none;}
+
+  /* 모집종사자 섹션 */
+  .manager .manager-content li {width: 50%;}
+
+  /* 회원사 섹션 */
+  .member {padding-bottom: 0;}
+  .member .member-content li {padding: 0 0 8.8rem; width: 33.3333%;}
+  .manager .manager-content li a {padding-bottom: 100%;}
 }
 
 @media screen and (max-width: 990px) {
-  .home .list2 > li > a { background-image:none;}
+  .home .list2 > li > a:after {display: none;}
 }
 
 @media screen and (max-width: 768px) {
+  html {font-size: 16px;}
+  body {font-size: 1rem;}
 
-  /* section content small */
+  .title h2 {font-size: 1.5rem; }
+  .title.bar h2:before {height: 2px; width: 15px}
+  .home .list > li h3,
+  .home .list2 > li > a h3,
+  .consumer .consumer-list ul li a h3 {font-size: .9rem; text-align: center;}
+  .home .list > li p {display: none;}
+  .member .member-content li a p {display: none;}
+  .home .list2 li.other h3 {overflow: hidden; position: absolute; margin: -1px; width: 1px; height: 1px; border:0; clip:rect(1px, 1px, 1px, 1px); clip-path: inset(50%);}
+  .home .list1 li a h3:before {width: 5.5rem; height: 5.5rem;}
+  .home .list > li {padding: 1%;}
+  .home .list > li > a {padding: 0}
+  .home .list > li > a .btn-style01 {display: none;}
+  .home .list1 li a h3 {padding: 1rem 0}
+  .home .list1 li a h3:before {margin-bottom: .8rem;}
+  .home .list2 > li > a {padding-top: 5.4rem; padding-bottom: .25rem; height: auto;}
+  .home .list2 > li > a:after {display: block; left: 50%; top: .8rem; transform: translateX(-50%); }
+  .home .list2 li.other div {height: auto;}
+  .home .list2 li.other div ul {padding: .8rem;}
+
+  .community .community-quick ul {padding: 10% 6%;}
+  .community .row > article {padding: 1%;}
+  .consumer .consumer-list ul li {padding: 1%;}
+
+  .consumer .title {text-align: center;}
+  .consumer .title.bar h2:before {left: 50%; transform: translateX(-50%);}
+  .consumer .consumer-list ul li a {padding: 0; height: auto;}
+  .consumer .consumer-list ul li a h3 {padding-top: 5rem;}
+  .consumer .consumer-list ul li a:after {top: .8rem;}
+  
+  .manager .manager-content li {padding: 1%;}
   
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
 
   /* 헤더 */
+  header {text-align: center;}
+  header h1 {float: none; padding: 0; display: inline-block; text-align: center; }
+  header h1 a {display: inline-block;}
   header nav {display: none;}
+  header .spot {display: block;}
+  header .spot .sitemap-btn {display: none;}
+  header .spot .lang {display: none;}
+  .search input {display: none;}
+  .search button {border-radius: 50%; position: absolute; top: 1rem; right: .6rem;}
+  .search button:before {width: 1rem; height: 1rem;}
 
   /* 모바일 메뉴 버튼 */
-  .mobie-menu-btn {display: block;}
+  .mobile-menu-btn {display: block;}
+
+  /* 회원사 섹션 */
+  .consumer .consumer-list ul li a h3
+  .manager .manager-content li a {padding-bottom: 100%;}
+  .manager .manager-content li a {padding: 1.2rem 1.2rem 100%; height: 15rem;}
+  .manager .manager-content li a strong { font-size: 1.25rem; line-height: 1.2em;}
+  .manager .manager-content li a p {display: none;}
+  .member {padding-bottom: 0;}
+  .member .member-content li {padding: 0 .3rem 3rem; width: 33.3333%;}
+  .member .member-content li a { width: auto; }
+  .member .member-content li a span {border: .25rem solid #fff;}
+
+    /* 사이트맵 */
+  .sitemap-content {display: block; left: -100%; right: initial; width: 90%; background: #fff; overflow-y: auto; transition: all .3s;}
+  .sitemap-content.on {left: 0;}
+  .sitemap-content .container {width: 100%;}
+  .sitemap-content h1 {padding: 1.1rem 0 0; height: 4rem; border-bottom:none;}
+  .sitemap-content h1 img.pc {display: none;}
+  .sitemap-content h1 img.mo {display: inline-block; width: 7.75rem;}
+  .sitemap-content .top-menu > li {background-color: #efefef; border-bottom: 1px solid #ddd;}
+  .sitemap-content .top-menu > li:last-child {border-bottom: none;}
+  .sitemap-content h2 {position: relative; float: none; padding: .6rem 1.2rem; width: 100%; border-bottom:1px solid #ddd; font-size: 1rem; color: #000;}
+  .sitemap-content h2:after,
+  .sitemap-content .sub-menu > li.more > a:after {content:'\f067'; font-family: fontawesome; position: absolute; top: 50%; right: 1.2rem; transform: translateY(-50%); width: 1.5rem; height: 1.5rem; line-height: 1.8rem; font-size: .8rem; color: #444; text-align: center;}
+  .sitemap-content .sub-menu > li.more > a:after {color: #999;}
+  .sitemap-content h2.on {background: #108ad3;}
+  .sitemap-content h2.on:after,
+  .sitemap-content .sub-menu > li.more.on > a:after {content: '\f068'; color: #fff;}
+  .sitemap-content a {color: #000;}
+  .sitemap-content .sub-menu {display: none; float: none; padding: 0; width: 100%;}
+  .sitemap-content .sub-menu > li {display: block; padding: 0; width: 100%; background: #dde4ec; border-bottom: 1px solid #ddd; text-align: left; line-height: 1.4em; vertical-align: top;}
+  .sitemap-content .sub-menu > li:last-child {border: none;}
+  .sitemap-content .sub-menu > li > a {display: block; position: relative; padding: .6rem 1.2rem; font-size: .85rem;}
+  .sitemap-content .sub-menu2 {display: none; padding: 0; line-height: 1; }
+  .sitemap-content .sub-menu2 > li {background: #fff; border-bottom: 1px solid #ddd;}
+  .sitemap-content .sub-menu2 > li:last-child {border: none;}
+  .sitemap-content .sub-menu2 > li > a {display: block; padding: .6rem 1.2rem; margin-left: 0; font-size: .8rem; color: #000; }
+  .sitemap-content .compare {display: block; position: initial; padding: 1.5rem 0; text-align: center;}
+  .sitemap-content .close.pc {display: none;}
+  .sitemap-content .close.mo {display: block;}
+
+  /* 금융상품 비교공시 바로가기 */
+  .compare {display: none;}
 }
+
